@@ -1,0 +1,116 @@
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.topLine {
+    margin-top: 30px;
+}
+
+.iconContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.caLogo {
+    width: 30px;
+}
+
+.caLogo {
+    transition: all 0.5s linear;
+}
+
+.icons a {
+    transition: all 0.2s linear;
+}
+
+.caLogo:hover,
+.caLogo:focus-within {
+    transform: rotateY(180deg);
+}
+
+.icons {
+    font-size: 25px;
+    display: flex;
+    color: $secondaryColor;
+}
+
+.icons li {
+    margin-right: 30px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons li:last-of-type {
+    margin-right: 0;
+}
+
+.icons a:hover,
+.icons a:focus-within {
+    color: $secondaryColor;
+    font-size: 35px;
+}
+
+.miniWrapper {
+    width: 710px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 72px;
+}
+
+.intro {
+    line-height: 1.7em;
+    color: $primaryColor;
+    font-size: 21px;
+}
+
+.instructions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.headerSojoo {
+    width: 11rem;
+    height: auto;
+    -webkit-filter: grayscale(0.4);
+    filter: grayscale(0.4);
+}
+
+.instagram {
+    transition: all 0.2s linear;
+    font-weight: bold;
+}
+
+.instagram:hover,
+.instagram:focus-within {
+    background: -webkit-linear-gradient(60deg, #f09433,#e6683c,#dc2743,#bc1888 ,#c428eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.down {
+    font-size: 4.5em;
+    transform: rotate(180deg);
+    margin-bottom: 30px;
+    color: $secondaryColor;
+    filter: drop-shadow(-3px -3px 5px #4d433d);
+    transition: all 0.1s linear;
+}
+
+.down:hover,
+.down:focus-within,
+.down:active {
+    color: #574d48;
+    filter: drop-shadow(-3px -3px 5px #4d433dab);
+}

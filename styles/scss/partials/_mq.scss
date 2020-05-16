@@ -1,0 +1,118 @@
+@media(max-width: 905px){
+    .miniWrapper{
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+}
+
+@media(max-width: 740px){
+    h1 {
+        font-size: 45px;
+    }
+}
+
+@media(max-width: 720px){
+    .headerSojoo {
+        width: 15rem;
+    }
+
+    .sojooContainer {
+        height: 70%;
+    }
+
+    .sojooContainer {
+        height: 50%;
+    }
+}
+
+@media(max-width: 560px){
+    form {
+        width: 80%;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+}
+
+@media(max-width: 555px){
+    .icons li {
+    margin-right: 15px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .intro {
+        font-size: 17px;
+    }
+
+    .down {
+        font-size: 3.3em;
+    }
+
+    .sojooContainer {
+        height: 40%;
+    }
+}
+
+@media(max-width: 540px){
+    input{
+        width: 77%;
+    }
+}
+
+@media(max-width: 440px){
+    .icons {
+    font-size: 23px;
+    }
+
+    .icons li {
+    margin-right: 5px;
+    }
+
+    h1 {
+        font-size: 37px;
+    }
+
+    .headerSojoo {
+        width: 23rem;
+    }
+
+    .down {
+        font-size: 3.1em;
+    }
+
+    input{
+        width: 74%;
+    }
+
+    .sojooContainer {
+        height: 37%;
+    }
+}
+
+@media(max-width: 375px){
+    input {
+        margin-right: 10px;
+        font-size: 95%;
+        padding: 0 10px;
+    }
+
+    .sojooContainer {
+        height: 35%;
+    }
+}
+
+@media(max-width: 350px){
+    input {
+        margin-right: 2px;
+        font-size: 92%;
+    }
+
+    .sojooContainer {
+        height: 30%;
+    }
+}

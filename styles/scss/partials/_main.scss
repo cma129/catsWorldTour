@@ -1,0 +1,92 @@
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    background-color: $accentColor;
+    color: $lightColor;
+    opacity: 1;
+    font-family: 'Sen', sans-serif;
+    width: 350px;
+    height: 60px;
+    padding: 0 20px;
+    border-radius: 10px;
+    filter: drop-shadow(2px 2px 3px #4d433d);
+    margin-right: 30px;
+    transition: all 0.1s linear;
+}
+
+.goContainer {
+    position: relative;
+    height: 60px;
+    width: 60px;
+}
+
+.paw {
+    color: $accentColor;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 60px;
+    filter: drop-shadow(2px 2px 4px #4d433d);
+    transition: all 0.1s linear;
+}
+
+input:hover,
+input:focus-within,
+input:active,
+.goContainer:hover .paw,
+.goContainer:focus-within .paw,
+.goContainer:active .paw {
+    filter: drop-shadow(2px 2px 2px #4d433dab);
+}
+
+.go {
+    color: #a99e94;
+    position: absolute;
+    top: 32px;
+    left: 16.5px;
+    text-transform: uppercase;
+}
+
+.sojooContainer {
+    height: 60%;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.sojoo,
+.sojooOnHover {
+    height: 100%;
+    width: auto;
+    position: absolute;
+    top: 0;
+    transition: opacity 0.2s linear;
+}
+
+.sojooOnHover{
+    opacity: 0;
+    z-index: 999;
+}
+
+.sojooContainer:hover .sojoo,
+.sojooContainer:focus-within .sojoo {
+    opacity: 0;
+}
+
+.sojooContainer:hover .sojooOnHover,
+.sojooContainer:focus-within .sojoo {
+    opacity: 1;
+}

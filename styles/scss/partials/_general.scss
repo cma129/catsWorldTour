@@ -1,0 +1,22 @@
+html {
+    font-family: 'Sen', sans-serif;
+    font-size: 19px;
+    text-align: center;
+    color: $primaryColor;
+    background-color: $backgroundColor;
+    background-repeat: no-repeat; 
+    background-size: 30%; 
+    background-position: 80% 50%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+*:focus-within {
+    outline: none;
+}
+
+button,
+label {
+    cursor: pointer;
+}
