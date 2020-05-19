@@ -7,8 +7,12 @@ main {
 
 form {
     display: flex;
-    align-items: center;
     justify-content: center;
+}
+
+.autocomplete {
+    position: relative;
+    display: inline-block;
 }
 
 input {
@@ -16,13 +20,56 @@ input {
     color: $lightColor;
     opacity: 1;
     font-family: 'Sen', sans-serif;
-    width: 350px;
     height: 60px;
     padding: 0 20px;
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
     filter: drop-shadow(2px 2px 3px #4d433d);
     margin-right: 30px;
     transition: all 0.1s linear;
+}
+
+input,
+.autocompleteItems {
+    width: 350px;
+}
+
+.autocompleteItems {
+    position: absolute;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    top: 100%;
+    left: 0;
+    right: 0;
+    filter: drop-shadow(2px 2px 3px #4d433d);
+    text-align: left;
+}
+
+.autocompleteItems div {
+    padding: 5px 20px;
+    cursor: pointer;
+    background-color: $accentColor;
+    color: $backgroundColor;
+    z-index: 9999;
+}
+
+.autocompleteItems div:first-of-type {
+    padding-top: 7px;
+}
+
+.autocompleteItems div:last-of-type {
+    padding-bottom: 10px;
+}
+
+.autocompleteItems div:hover,
+.autocompleteItems div:focus-within {
+    background-color: $lightColor;
+    color: $accentColor;
+}
+
+.autocompleteActive {
+    background-color: $lightColor !important;
+    color: $accentColor !important;
 }
 
 .goContainer {
@@ -78,7 +125,6 @@ input:active,
 
 .sojooOnHover{
     opacity: 0;
-    z-index: 999;
 }
 
 .sojooContainer:hover .sojoo,

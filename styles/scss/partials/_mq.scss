@@ -29,16 +29,14 @@
 }
 
 @media(max-width: 560px){
-    form {
-        width: 80%;
-        margin: 0 auto;
-        justify-content: space-between;
+    input {
+        margin-right: 10px;
     }
 }
 
 @media(max-width: 555px){
     .icons li {
-    margin-right: 15px;
+        margin-right: 15px;
     }
 
     h1 {
@@ -59,8 +57,22 @@
 }
 
 @media(max-width: 540px){
-    input{
-        width: 77%;
+    form {
+        justify-content: space-between;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    input,
+    .autocompleteItems {
+        width: 340px;
+    }
+}
+
+@media(max-width: 510px){
+    input,
+    .autocompleteItems {
+        width: 280px;
     }
 }
 
@@ -85,8 +97,9 @@
         font-size: 3.1em;
     }
 
-    input{
-        width: 74%;
+    input,
+    .autocompleteItems {
+        width: 263px;
     }
 
     .sojooContainer {
@@ -94,11 +107,29 @@
     }
 }
 
-@media(max-width: 375px){
+@media(max-width: 415px){
+    input,
+    .autocompleteItems {
+        width: 245px;
+    }
+}
+
+@media(max-width: 390px){
     input {
-        margin-right: 10px;
+        margin-right: 5px;
+    }
+
+    input,
+    .autocompleteItems {
+        width: 235px;
+    }
+}
+
+@media(max-width: 375px){
+    input,
+    .autocompleteItems {
         font-size: 95%;
-        padding: 0 10px;
+        width: 215px;
     }
 
     .sojooContainer {
@@ -107,9 +138,11 @@
 }
 
 @media(max-width: 350px){
-    input {
+    input,
+    .autocompleteItems {
         margin-right: 2px;
         font-size: 92%;
+        width: 190px;
     }
 
     .sojooContainer {

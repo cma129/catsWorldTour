@@ -544,12 +544,14 @@ form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.autocomplete {
+  position: relative;
+  display: inline-block;
 }
 
 input {
@@ -557,15 +559,59 @@ input {
   color: #f0e5d8;
   opacity: 1;
   font-family: 'Sen', sans-serif;
-  width: 350px;
   height: 60px;
   padding: 0 20px;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
   -webkit-filter: drop-shadow(2px 2px 3px #4d433d);
           filter: drop-shadow(2px 2px 3px #4d433d);
   margin-right: 30px;
   -webkit-transition: all 0.1s linear;
   transition: all 0.1s linear;
+}
+
+input,
+.autocompleteItems {
+  width: 350px;
+}
+
+.autocompleteItems {
+  position: absolute;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  top: 100%;
+  left: 0;
+  right: 0;
+  -webkit-filter: drop-shadow(2px 2px 3px #4d433d);
+          filter: drop-shadow(2px 2px 3px #4d433d);
+  text-align: left;
+}
+
+.autocompleteItems div {
+  padding: 5px 20px;
+  cursor: pointer;
+  background-color: #38302c;
+  color: #bdb1a3;
+  z-index: 9999;
+}
+
+.autocompleteItems div:first-of-type {
+  padding-top: 7px;
+}
+
+.autocompleteItems div:last-of-type {
+  padding-bottom: 10px;
+}
+
+.autocompleteItems div:hover,
+.autocompleteItems div:focus-within {
+  background-color: #f0e5d8;
+  color: #38302c;
+}
+
+.autocompleteActive {
+  background-color: #f0e5d8 !important;
+  color: #38302c !important;
 }
 
 .goContainer {
@@ -629,7 +675,6 @@ input:active,
 
 .sojooOnHover {
   opacity: 0;
-  z-index: 999;
 }
 
 .sojooContainer:hover .sojoo,
@@ -680,12 +725,8 @@ footer p {
 }
 
 @media (max-width: 560px) {
-  form {
-    width: 80%;
-    margin: 0 auto;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+  input {
+    margin-right: 10px;
   }
 }
 
@@ -708,8 +749,23 @@ footer p {
 }
 
 @media (max-width: 540px) {
-  input {
-    width: 77%;
+  form {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+  }
+  input,
+  .autocompleteItems {
+    width: 340px;
+  }
+}
+
+@media (max-width: 510px) {
+  input,
+  .autocompleteItems {
+    width: 280px;
   }
 }
 
@@ -729,19 +785,37 @@ footer p {
   .down {
     font-size: 3.1em;
   }
-  input {
-    width: 74%;
+  input,
+  .autocompleteItems {
+    width: 263px;
   }
   .sojooContainer {
     height: 37%;
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 415px) {
+  input,
+  .autocompleteItems {
+    width: 245px;
+  }
+}
+
+@media (max-width: 390px) {
   input {
-    margin-right: 10px;
+    margin-right: 5px;
+  }
+  input,
+  .autocompleteItems {
+    width: 235px;
+  }
+}
+
+@media (max-width: 375px) {
+  input,
+  .autocompleteItems {
     font-size: 95%;
-    padding: 0 10px;
+    width: 215px;
   }
   .sojooContainer {
     height: 35%;
@@ -749,9 +823,11 @@ footer p {
 }
 
 @media (max-width: 350px) {
-  input {
+  input,
+  .autocompleteItems {
     margin-right: 2px;
     font-size: 92%;
+    width: 190px;
   }
   .sojooContainer {
     height: 30%;

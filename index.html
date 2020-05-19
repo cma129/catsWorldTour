@@ -38,8 +38,10 @@
         <!-- Header ends here -->
         <!-- Main starts here -->
         <main id="start">
-            <form action="">
-                <input type="text" placeholder="Search a city">
+            <form action="" autocomplete="off">
+                <div class="autocomplete">
+                    <input required id="city" type="text" name="city" placeholder="Search a city">
+                </div>
                 <button class="goContainer" type="submit"><i class="paw fas fa-paw"></i><p class="go">Go</p></button>
             </form>
             <!-- <div id="output">
