@@ -527,7 +527,7 @@ h1 {
 }
 
 main {
-  height: 100vh;
+  height: 95vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -691,6 +691,7 @@ footer {
   text-align: right;
   color: #5d524c;
   font-size: 15px;
+  height: 5vh;
 }
 
 footer p {

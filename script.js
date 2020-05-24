@@ -1,21 +1,33 @@
-// function getInfo() {
-//     const xhr = new XMLHttpRequest();
-//     xhr.open('GET', 'https://api.pexels.com/v1/search?query=nature&per_page=1', true);
-//     xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
-//     xhr.setRequestHeader('X-API-Key', '563492ad6f9170000100000191b72a185fe644a5a08c524402334049');
-//     xhr.onload = function () {
-//         if (this.status == 200) {
-//             console.log('Worked');
-//         } else {
-//             console.log(this.status);
-//         }
+// const get = url => new Promise((resolve, reject) => {
+//   const xhr = new XMLHttpRequest();
+//   xhr.open('GET', url);
+//   xhr.onload = function() {
+//     if (xhr.status === 200) {
+//       resolve(JSON.parse(xhr.responseText));
 //     }
-//     xhr.onerror = function () {
-//         console.log('Request Error');
+//     else {
+//       alert('Request failed. Returned status of ' + xhr.status);
 //     }
-//     xhr.send();
-// }
-// getInfo();
+//   };
+//   xhr.send();
+// })
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://api.pexels.com/v1/search?query=nature&per_page=1', true);
+    xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+    xhr.setRequestHeader('X-API-Key', '563492ad6f9170000100000191b72a185fe644a5a08c524402334049');
+    xhr.onload = function () {
+        if (this.status == 200) {
+            console.log('Worked');
+        } else {
+            console.log(this.status);
+        }
+    }
+    xhr.onerror = function () {
+        console.log('Request Error');
+    }
+    xhr.send();
+}
+getInfo();
 
 // Grab user search input
 function grabUserCity() {
