@@ -1,16 +1,4 @@
-// const get = url => new Promise((resolve, reject) => {
-//   const xhr = new XMLHttpRequest();
-//   xhr.open('GET', url);
-//   xhr.onload = function() {
-//     if (xhr.status === 200) {
-//       resolve(JSON.parse(xhr.responseText));
-//     }
-//     else {
-//       alert('Request failed. Returned status of ' + xhr.status);
-//     }
-//   };
-//   xhr.send();
-// })
+function getInfo() {
     const xhr = new XMLHttpRequest();
     xhr.open('GET', 'https://api.pexels.com/v1/search?query=nature&per_page=1', true);
     xhr.setRequestHeader('Access-Control-Allow-Origin', '*');

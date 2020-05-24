@@ -514,8 +514,8 @@ h1 {
   color: #5d524c;
   -webkit-filter: drop-shadow(-3px -3px 5px #4d433d);
           filter: drop-shadow(-3px -3px 5px #4d433d);
-  -webkit-transition: all 0.1s linear;
-  transition: all 0.1s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 .down:hover,
