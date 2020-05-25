@@ -136,3 +136,14 @@ input:active,
 .sojooContainer:focus-within .sojoo {
     opacity: 1;
 }
+
+.errorMsg {
+    width: 300px;
+    height: 410px;
+    padding: 13% 4%;
+    z-index: 9999;
+    font-weight: bold;
+    position: absolute;
+    background-color: #bdb1a396;
+    border-radius: 10px;
+}

@@ -687,15 +687,43 @@ input:active,
   opacity: 1;
 }
 
+.errorMsg {
+  width: 300px;
+  height: 410px;
+  padding: 13% 4%;
+  z-index: 9999;
+  font-weight: bold;
+  position: absolute;
+  background-color: #bdb1a396;
+  border-radius: 10px;
+}
+
 footer {
-  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #5d524c;
   font-size: 15px;
   height: 5vh;
 }
 
 footer p {
+  text-align: right;
   margin-bottom: 20px;
+  background-color: #bdb1a3e1;
+  padding: 10px 15px;
+  border-radius: 7px;
+}
+
+footer a:hover,
+footer a:focus-within {
+  text-decoration: underline;
 }
 
 @media (max-width: 905px) {
