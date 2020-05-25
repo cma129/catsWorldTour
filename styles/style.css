@@ -578,7 +578,7 @@ input,
   position: absolute;
   border-bottom: none;
   border-top: none;
-  z-index: 99;
+  z-index: 99999;
   top: 100%;
   left: 0;
   right: 0;
@@ -592,7 +592,7 @@ input,
   cursor: pointer;
   background-color: #38302c;
   color: #bdb1a3;
-  z-index: 9999;
+  z-index: 999999;
 }
 
 .autocompleteItems div:first-of-type {
@@ -688,7 +688,7 @@ input:active,
 }
 
 .errorMsg {
-  width: 300px;
+  width: 305px;
   height: 410px;
   padding: 13% 4%;
   z-index: 9999;

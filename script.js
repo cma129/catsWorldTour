@@ -12,6 +12,7 @@ function getInfo() {
   xhr.onload = function () {
       if (this.status == 200) {
         if (JSON.parse(xhr.responseText).photos[0] === undefined) {
+          document.querySelector('.background').style.backgroundImage = '';
           const errorMsg = document.createElement('p');
           errorMsg.className = 'errorMsg';
           errorMsg.innerHTML = "Sorry, this city isn't available. Try another one. Meow!";
@@ -38,44 +39,67 @@ function getInfo() {
   xhr.send();
 }
 
-// On button click
-document.querySelector("form").addEventListener("submit", (e) => {
+// On button click, call functions
+document.querySelector('form').addEventListener('submit', (e) => {
   e.preventDefault();
   getInfo();
-});
-// On keyboard enter key
-document.querySelector("#city").addEventListener("keyup", (e) => {
-if (event.keyCode === 13) {
-  e.preventDefault();
-  getInfo();
-}
 });
 
-const cities = ['Tokyo', 'New York', 'Mexico City', 'Mumbai', 'Sao Paulo', 'Delhi', 'Shanghai', 'Kolkata', 'Los Angeles', 'Dhaka', 'Buenos Aires', 'Karachi', 'Cairo', 'Rio de Janeiro', 'Osaka', 'Beijing', 'Manila', 'Moscow', 'Istanbul', 'Paris', 'Seoul', 'Lagos', 'Jakarta', 'Guangzhou', 'Chicago', 'London', 'Lima', 'Tehran', 'Kinshasa', 'Bogota', 'Shenzhen', 'Wuhan', 'Hong Kong', 'Tianjin', 'Chennai', 'Taipei', 'Bengaluru', 'Bangkok', 'Lahore', 'Chongqing', 'Miami', 'Hyderabad', 'Dallas', 'Santiago', 'Philadelphia', 'Belo Horizonte', 'Madrid', 'Houston', 'Ahmadabad', 'Ho Chi Minh City', 'Washington', 'Atlanta', 'Toronto', 'Singapore', 'Luanda', 'Baghdad', 'Barcelona', 'Haora', 'Shenyang', 'Khartoum', 'Pune', 'Boston', 'Sydney', 'Saint Petersburg', 'Chittagong', 'Dongguan', 'Riyadh', 'Hanoi', 'Guadalajara', 'Melbourne', 'Alexandria', 'Chengdu', 'Rangoon', 'Phoenix', 'Porto Alegre', 'Surat', 'Hechi', 'Abidjan', 'Brasilia', 'Ankara', 'Monterrey', 'Yokohama', 'Nanjing', 'Montreal', 'Guiyang', 'Recife', 'Seattle', 'Harbin', 'San Francisco', 'Fortaleza', 'Zhangzhou', 'Detroit', 'Salvador', 'Busan', 'Johannesburg', 'Berlin', 'Algiers', 'Rome', 'Pyongyang', 'Medellin', 'Kabul', 'Athens', 'Nagoya', 'Cape Town', 'San Diego', 'Changchun', 'Casablanca', 'Dalian', 'Cawnpore', 'Kano', 'Tel Aviv-Yafo', 'Addis Ababa', 'Curitiba', 'Zibo', 'Jeddah', 'Nairobi', 'Hangzhou', 'Benoni', 'Caracas', 'Milan', 'Stuttgart', 'Kunming', 'Dar es Salaam', 'Minneapolis', 'Jaipur', 'Taiyuan', 'Frankfurt', 'Qingdao', 'Surabaya', 'Lisbon', 'Tampa', 'Jinan', 'Fukuoka', 'Campinas', 'Denver', 'Kaohsiung', 'Quezon City', 'Katowice', 'Aleppo', 'Durban', 'Kyiv', 'Lucknow', 'Giza', 'Zhengzhou', 'Taichung', 'Brooklyn', 'Ibadan', 'Faisalabad', 'Fuzhou', 'Changsha', 'Dakar', 'Izmir', 'Xiangtan', 'Lanzhou', 'Incheon', 'Sapporo', 'Xiamen', 'Guayaquil', 'George Town', 'Mashhad', 'Damascus', 'Daegu', 'Nagpur', 'Lianshan', 'Shijiazhuang', 'Tunis', 'Vienna', 'Jilin', 'Omdurman', 'Bandung', 'Bekasi', 'Mannheim', 'Nanchang', 'Wenzhou', 'Queens', 'Vancouver', 'Birmingham', 'Cali', 'Naples', 'Sendai', 'Manchester', 'Puebla', 'Tripoli', 'Tashkent', 'Havana', 'Gaoping', 'Baltimore', 'Nanning', 'Belem'];
+// If the ENTER key is pressed, call functions
+document.addEventListener('keydown', (e) => {
+  if (e.keyCode === 13) {
+    e.preventDefault();
+    getInfo();
+  }
+});
+
+// Reset all when user types in a new city
+function reset () {
+  document.querySelector('.errorMsg').innerHTML = '';
+  document.querySelector('.errorMsg').removeAttribute("class");
+};
+document.querySelector('button').addEventListener('click', () => {
+  reset();
+  document.querySelector('.background').style.backgroundImage = '';
+});
+document.querySelector('#city').addEventListener('keydown', (e) => {
+  if(e.keyCode == 13)  {
+    reset();
+  }
+});
+document.querySelector('#city').addEventListener('change', () => {
+  reset();
+});
+document.querySelector('#city').addEventListener('click', () => {
+  document.querySelector('#city').value = '';
+  reset();
+})
+
+const cities = ['Tokyo', 'New York', 'Mexico City', 'Mumbai', 'Sao Paulo', 'Delhi', 'Shanghai', 'Kolkata', 'Los Angeles', 'Buenos Aires', 'Karachi', 'Cairo', 'Rio de Janeiro', 'Osaka', 'Beijing', 'Manila', 'Moscow', 'Istanbul', 'Paris', 'Seoul', 'Lagos', 'Jakarta', 'Guangzhou', 'Chicago', 'London', 'Lima', 'Tehran', 'Bogota', 'Shenzhen', 'Hong Kong', 'Tianjin', 'Chennai', 'Taipei', 'Bengaluru', 'Bangkok', 'Lahore', 'Chongqing', 'Miami', 'Hyderabad', 'Dallas', 'Santiago', 'Philadelphia', 'Belo Horizonte', 'Madrid', 'Houston', 'Ahmadabad', 'Ho Chi Minh City', 'Atlanta', 'Toronto', 'Singapore', 'Luanda', 'Baghdad', 'Barcelona', 'Haora', 'Shenyang', 'Khartoum', 'Pune', 'Boston', 'Sydney', 'Saint Petersburg', 'Chittagong', 'Riyadh', 'Hanoi', 'Guadalajara', 'Melbourne', 'Alexandria', 'Chengdu', 'Rangoon', 'Phoenix', 'Porto Alegre', 'Surat', 'Hechi', 'Abidjan', 'Brasilia', 'Ankara', 'Monterrey', 'Yokohama', 'Nanjing', 'Montreal', 'Guiyang', 'Recife', 'Seattle', 'Harbin', 'San Francisco', 'Fortaleza', 'Zhangzhou', 'Detroit', 'Salvador', 'Busan', 'Berlin', 'Algiers', 'Rome', 'Pyongyang', 'Medellin', 'Kabul', 'Athens', 'Nagoya', 'Cape Town', 'San Diego', 'Changchun', 'Casablanca', 'Dalian', 'Cawnpore', 'Kano', 'Addis Ababa', 'Curitiba', 'Zibo', 'Nairobi', 'Hangzhou', 'Benoni', 'Caracas', 'Milan', 'Stuttgart', 'Kunming', 'Dar es Salaam', 'Minneapolis', 'Jaipur', 'Taiyuan', 'Frankfurt', 'Surabaya', 'Lisbon', 'Tampa', 'Jinan', 'Fukuoka', 'Campinas', 'Denver', 'Kaohsiung', 'Katowice', 'Aleppo', 'Durban', 'Kyiv', 'Lucknow', 'Giza', 'Zhengzhou', 'Taichung', 'Brooklyn', 'Ibadan', 'Faisalabad', 'Fuzhou', 'Changsha', 'Dakar', 'Izmir', 'Xiangtan', 'Lanzhou', 'Incheon', 'Sapporo', 'Xiamen', 'Guayaquil', 'George Town', 'Mashhad', 'Damascus', 'Daegu', 'Nagpur', 'Lianshan', 'Shijiazhuang', 'Tunis', 'Vienna', 'Jilin', 'Omdurman', 'Bandung', 'Bekasi', 'Mannheim', 'Nanchang', 'Wenzhou', 'Vancouver', 'Birmingham', 'Cali', 'Naples', 'Sendai', 'Manchester', 'Puebla', 'Tripoli', 'Tashkent', 'Havana', 'Gaoping', 'Baltimore', 'Nanning', 'Belem'];
 function autocomplete(inp, arr) {
   let currentFocus;
-  inp.addEventListener("input", function(e) {
+  inp.addEventListener('input', function(e) {
       var a, b, i, val = this.value;
   closeAllLists();
       if (!val) {return false;}  
       currentFocus = -1;
-      a = document.createElement("DIV");
-      a.setAttribute("id", this.id + "autocompleteList");
-      a.setAttribute("class", "autocompleteItems");
+      a = document.createElement('DIV');
+      a.setAttribute('id', this.id + 'autocompleteList');
+      a.setAttribute('class', 'autocompleteItems');
       this.parentNode.appendChild(a);
       for (i = 0; i < arr.length; i++) {
           // check if the item starts with the same letters as the text field value
           if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
           // create a DIV element for each matching element
-          b = document.createElement("DIV");
+          b = document.createElement('DIV');
           // make the matching letters bold
-          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML = '<span>' + arr[i].substr(0, val.length) + '</span>';
           b.innerHTML += arr[i].substr(val.length);
           // insert a input field that will hold the current array item's value
           b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
               b.addEventListener("click", function(e) {
               /*insert the value for the autocomplete text field:*/
-              inp.value = this.querySelectorAll("input")[0].value;
+              inp.value = this.querySelectorAll('input')[0].value;
               closeAllLists();
           });
           a.appendChild(b);
@@ -83,7 +107,7 @@ function autocomplete(inp, arr) {
       }
   });
   /*execute a function presses a key on the keyboard:*/
-  inp.addEventListener("keydown", function(e) {
+  inp.addEventListener('keydown', function(e) {
       var x = document.getElementById(this.id + "autocompleteList");
       if (x) x = x.querySelectorAll("div");
       if (e.keyCode == 40) {
