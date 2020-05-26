@@ -181,3 +181,10 @@
         height: auto;
     }
 }
+
+// Touchscreen
+@media (hover: none) and (pointer: coarse) {
+    footer {
+        display: none;
+    }
+}
