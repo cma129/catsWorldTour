@@ -376,6 +376,10 @@ label {
   cursor: pointer;
 }
 
+.background {
+  max-height: 100vh;
+}
+
 header {
   height: 100vh;
   display: -webkit-box;
@@ -504,6 +508,10 @@ h1 {
   background: -webkit-linear-gradient(60deg, #f09433, #e6683c, #dc2743, #bc1888, #c428eb);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.hiddenIntro {
+  display: none;
 }
 
 .down {
@@ -715,7 +723,7 @@ footer {
 
 footer p {
   text-align: right;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   background-color: #bdb1a3e1;
   padding: 10px 15px;
   border-radius: 7px;
@@ -885,11 +893,35 @@ footer a:focus-within {
   }
 }
 
-@media (max-height: 450px) {
-  header {
-    height: 130vh;
+@media (max-height: 400px) {
+  .intro {
+    display: none;
   }
-  main {
-    height: auto;
+  .downPaw {
+    display: none;
+  }
+  .hiddenIntro {
+    display: initial;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+  }
+  .background {
+    display: none;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  footer p {
+    margin-bottom: 0;
+  }
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  .selector:not(*:root), .headerSojoo {
+    display: none;
+  }
+  .selector:not(*:root), .down {
+    margin-bottom: 80px;
   }
 }

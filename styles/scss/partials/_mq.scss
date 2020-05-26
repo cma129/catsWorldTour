@@ -172,12 +172,43 @@
     }
 }
 
-@media(max-height: 450px) {
-    header {
-        height: 130vh;
+// Mobile landscape
+@media(max-height: 400px) {
+    .intro {
+        display: none;
     }
 
-    main {
-        height: auto;
+    .downPaw {
+        display: none;
+    }
+
+    .hiddenIntro {
+        display: initial;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 60px;
+    }
+
+    .background {
+        display: none;
     }
 }
+
+// Desktop Chrome
+@media screen and (-webkit-min-device-pixel-ratio:0)
+    and (min-resolution:.001dpcm) {
+        footer p {
+            margin-bottom: 0;
+        }
+}
+
+// Mobile Chrome
+    @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) { 
+        .selector:not(*:root), .headerSojoo {
+            display: none;
+        }
+
+        .selector:not(*:root), .down {
+            margin-bottom: 80px;
+        }
+    }
