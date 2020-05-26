@@ -171,3 +171,13 @@
         font-size: 14px;
     }
 }
+
+@media(max-height: 450px) {
+    header {
+        height: auto;
+    }
+
+    main {
+        height: auto;
+    }
+}
