@@ -16,6 +16,10 @@
     h1 {
         font-size: 45px;
     }
+
+    footer {
+        display: none;
+    }
 }
 
 @media(max-width: 720px){
@@ -166,25 +170,14 @@
         width: 277px;
         top: 3%;
     }
-
-    footer p {
-        font-size: 14px;
-    }
 }
 
 @media(max-height: 450px) {
     header {
-        height: 140vh;
+        height: 170vh;
     }
 
     main {
         height: auto;
-    }
-}
-
-// Touchscreen
-@media (hover: none) and (pointer: coarse) {
-    footer {
-        display: none;
     }
 }
