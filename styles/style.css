@@ -888,7 +888,7 @@ footer a:focus-within {
 
 @media (max-height: 450px) {
   header {
-    height: 170vh;
+    height: 130vh;
   }
   main {
     height: auto;
