@@ -106,8 +106,8 @@ input:active,
 }
 
 .sojooContainer {
-    height: 80%;
-    width: 25%;
+    height: 70%;
+    width: 100%;
     position: relative;
     margin: 0 auto;
     display: flex;
@@ -116,10 +116,10 @@ input:active,
 
 .sojoo,
 .sojooOnHover {
-    height: 100%;
-    width: auto;
+    height: 560px;
+    width: 450px;
     position: absolute;
-    top: 0;
+    top: -13%;
     transition: opacity 0.2s linear;
 }
 
@@ -138,12 +138,14 @@ input:active,
 }
 
 .errorMsg {
-    width: 305px;
-    height: 410px;
-    padding: 13% 4%;
+    width: 100%;
+    height: 110%;
+    padding: 13% 40%;
     z-index: 9999;
     font-weight: bold;
     position: absolute;
     background-color: #bdb1a396;
     border-radius: 10px;
+    top: -8%;
+
 }

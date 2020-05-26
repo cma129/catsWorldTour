@@ -651,8 +651,8 @@ input:active,
 }
 
 .sojooContainer {
-  height: 80%;
-  width: 25%;
+  height: 70%;
+  width: 100%;
   position: relative;
   margin: 0 auto;
   display: -webkit-box;
@@ -665,10 +665,10 @@ input:active,
 
 .sojoo,
 .sojooOnHover {
-  height: 100%;
-  width: auto;
+  height: 560px;
+  width: 450px;
   position: absolute;
-  top: 0;
+  top: -13%;
   -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
 }
@@ -688,14 +688,15 @@ input:active,
 }
 
 .errorMsg {
-  width: 305px;
-  height: 410px;
-  padding: 13% 4%;
+  width: 100%;
+  height: 110%;
+  padding: 13% 40%;
   z-index: 9999;
   font-weight: bold;
   position: absolute;
   background-color: #bdb1a396;
   border-radius: 10px;
+  top: -8%;
 }
 
 footer {
@@ -719,6 +720,8 @@ footer p {
   background-color: #bdb1a3e1;
   padding: 10px 15px;
   border-radius: 7px;
+  position: relative;
+  left: 15px;
 }
 
 footer a:hover,
@@ -733,6 +736,9 @@ footer a:focus-within {
   h1 {
     font-size: 60px;
   }
+  .errorMsg {
+    padding: 25% 37%;
+  }
 }
 
 @media (max-width: 740px) {
@@ -745,17 +751,19 @@ footer a:focus-within {
   .headerSojoo {
     width: 15rem;
   }
-  .sojooContainer {
-    height: 70%;
-  }
-  .sojooContainer {
-    height: 50%;
+  .sojoo,
+  .sojooOnHover {
+    height: 535px;
+    width: 430px;
   }
 }
 
 @media (max-width: 560px) {
   input {
     margin-right: 10px;
+  }
+  .errorMsg {
+    padding: 35%;
   }
 }
 
@@ -772,8 +780,11 @@ footer a:focus-within {
   .down {
     font-size: 3.3em;
   }
-  .sojooContainer {
-    height: 40%;
+  .sojoo,
+  .sojooOnHover {
+    height: 450px;
+    width: 362px;
+    top: -9%;
   }
 }
 
@@ -808,8 +819,11 @@ footer a:focus-within {
   h1 {
     font-size: 37px;
   }
-  .headerSojoo {
-    width: 23rem;
+  .sojoo,
+  .sojooOnHover {
+    height: 400px;
+    width: 321px;
+    top: 0;
   }
   .down {
     font-size: 3.1em;
@@ -818,15 +832,15 @@ footer a:focus-within {
   .autocompleteItems {
     width: 263px;
   }
-  .sojooContainer {
-    height: 37%;
-  }
 }
 
 @media (max-width: 415px) {
   input,
   .autocompleteItems {
     width: 245px;
+  }
+  .errorMsg {
+    padding: 47% 30%;
   }
 }
 
@@ -846,8 +860,11 @@ footer a:focus-within {
     font-size: 95%;
     width: 215px;
   }
-  .sojooContainer {
-    height: 35%;
+  .sojoo,
+  .sojooOnHover {
+    height: 380px;
+    width: 305px;
+    top: 2%;
   }
 }
 
@@ -858,7 +875,13 @@ footer a:focus-within {
     font-size: 92%;
     width: 190px;
   }
-  .sojooContainer {
-    height: 30%;
+  .sojoo,
+  .sojooOnHover {
+    height: 345px;
+    width: 277px;
+    top: 3%;
+  }
+  footer p {
+    font-size: 14px;
   }
 }

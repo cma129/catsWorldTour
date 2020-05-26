@@ -6,6 +6,10 @@
     h1 {
         font-size: 60px;
     }
+
+    .errorMsg {
+        padding: 25% 37%;
+    }
 }
 
 @media(max-width: 740px){
@@ -19,18 +23,20 @@
         width: 15rem;
     }
 
-    .sojooContainer {
-        height: 70%;
-    }
-
-    .sojooContainer {
-        height: 50%;
+    .sojoo,
+    .sojooOnHover {
+        height: 535px;
+        width: 430px;
     }
 }
 
 @media(max-width: 560px){
     input {
         margin-right: 10px;
+    }
+
+    .errorMsg {
+        padding: 35%;
     }
 }
 
@@ -51,8 +57,11 @@
         font-size: 3.3em;
     }
 
-    .sojooContainer {
-        height: 40%;
+    .sojoo,
+    .sojooOnHover {
+        height: 450px;
+        width: 362px;
+        top: -9%;
     }
 }
 
@@ -89,8 +98,11 @@
         font-size: 37px;
     }
 
-    .headerSojoo {
-        width: 23rem;
+    .sojoo,
+    .sojooOnHover {
+        height: 400px;
+        width: 321px;
+        top: 0;
     }
 
     .down {
@@ -101,16 +113,16 @@
     .autocompleteItems {
         width: 263px;
     }
-
-    .sojooContainer {
-        height: 37%;
-    }
 }
 
 @media(max-width: 415px){
     input,
     .autocompleteItems {
         width: 245px;
+    }
+
+    .errorMsg {
+        padding: 47% 30%;
     }
 }
 
@@ -132,8 +144,11 @@
         width: 215px;
     }
 
-    .sojooContainer {
-        height: 35%;
+    .sojoo,
+    .sojooOnHover {
+        height: 380px;
+        width: 305px;
+        top: 2%;
     }
 }
 
@@ -145,7 +160,14 @@
         width: 190px;
     }
 
-    .sojooContainer {
-        height: 30%;
+    .sojoo,
+    .sojooOnHover {
+        height: 345px;
+        width: 277px;
+        top: 3%;
+    }
+
+    footer p {
+        font-size: 14px;
     }
 }
