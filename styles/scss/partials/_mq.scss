@@ -212,3 +212,14 @@
             margin-bottom: 80px;
         }
     }
+
+// iOS
+    @supports (-webkit-touch-callout: none) {
+        .headerSojoo {
+            display: none;
+        }
+    
+        .down {
+            margin-bottom: 80px;
+        }
+    }
