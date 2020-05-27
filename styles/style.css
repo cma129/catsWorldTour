@@ -671,7 +671,8 @@ input:active,
           justify-content: center;
 }
 
-.sojoo {
+.sojoo,
+.sojooOnHover {
   height: 560px;
   width: 450px;
   position: absolute;

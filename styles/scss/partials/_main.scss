@@ -114,7 +114,8 @@ input:active,
     justify-content: center;
 }
 
-.sojoo {
+.sojoo,
+.sojooOnHover {
     height: 560px;
     width: 450px;
     position: absolute;
@@ -122,7 +123,7 @@ input:active,
     transition: opacity 0.2s linear;
 }
 
-.sojooOnHover{
+.sojooOnHover {
     opacity: 0;
 }
 
