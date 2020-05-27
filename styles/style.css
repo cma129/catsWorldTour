@@ -671,8 +671,7 @@ input:active,
           justify-content: center;
 }
 
-.sojoo,
-.sojooOnHover {
+.sojoo {
   height: 560px;
   width: 450px;
   position: absolute;
@@ -723,7 +722,6 @@ footer {
 
 footer p {
   text-align: right;
-  margin-bottom: 10px;
   background-color: #bdb1a3e1;
   padding: 10px 15px;
   border-radius: 7px;
@@ -897,23 +895,11 @@ footer a:focus-within {
   .intro {
     display: none;
   }
-  .downPaw {
-    display: none;
-  }
   .hiddenIntro {
     display: initial;
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 60px;
-  }
-  .background {
-    display: none;
-  }
-}
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
-  footer p {
-    margin-bottom: 0;
   }
 }
 
