@@ -925,3 +925,9 @@ footer a:focus-within {
     margin-bottom: 80px;
   }
 }
+
+@supports (-webkit-touch-callout: none) {
+  .headerSojoo {
+    display: none;
+  }
+}
