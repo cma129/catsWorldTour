@@ -152,3 +152,7 @@ document.addEventListener("click", function (e) {
 });
 } 
 autocomplete(document.querySelector("#city"), cities);
+
+function toBottom() {
+  window.scrollTo(0,document.body.scrollHeight);
+}

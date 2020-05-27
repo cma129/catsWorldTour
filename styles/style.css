@@ -734,6 +734,10 @@ footer a:focus-within {
   text-decoration: underline;
 }
 
+footer div {
+  color: #bdb1a300;
+}
+
 @media (max-width: 905px) {
   .miniWrapper {
     width: 80%;
